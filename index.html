@@ -8,6 +8,9 @@
   <style>
     body { background-color: #0f0f0f; color: #e0e0e0; font-family: 'Orbitron', sans-serif; }
     .cyber-gradient-bg { background: linear-gradient(135deg, #0ff, #0f0); }
+    .message { margin-top: 1rem; padding: 0.75rem; border-radius: 0.5rem; }
+    .success { background-color: #1f2937; color: #10b981; }
+    .error { background-color: #1f2937; color: #ef4444; }
   </style>
 </head>
 <body class="p-6">
@@ -23,17 +26,22 @@
       <input type="text" id="productName" placeholder="Product Name" required class="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white">
       <input type="number" id="productQuantity" placeholder="Quantity" value="1" min="1" required class="w-full p-3 rounded bg-gray-900 border border-gray-700 text-white">
       <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold rounded hover:from-cyan-400 hover:to-emerald-400 transition">
-        Submit Order
+        Complete Checkout
       </button>
     </form>
+    <div id="messageBox" class="message hidden"></div>
   </div>
 
   <script>
     const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN'; // 🔒 Keep private
     const REPO_OWNER = 'omguptaogwhitehathacker-svg';
     const REPO_NAME = 'YOUR_REPO_NAME'; // Replace with your repo name
+    const PAYMENT_URL = 'https://www.paypal.com/paypalme/YOURPAYMENTLINK'; // Replace with your actual payment link
 
-    document.getElementById('orderForm').addEventListener('submit', async function(e) {
+    const form = document.getElementById('orderForm');
+    const messageBox = document.getElementById('messageBox');
+
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const name = document.getElementById('customerName').value.trim();
@@ -64,14 +72,24 @@
 
         const result = await response.json();
         if (response.ok) {
-          alert('✅ Order submitted successfully!');
-          document.getElementById('orderForm').reset();
+          messageBox.textContent = '✅ Order submitted successfully. Redirecting to payment...';
+          messageBox.className = 'message success';
+          messageBox.classList.remove('hidden');
+
+          setTimeout(() => {
+            window.open(PAYMENT_URL, '_blank');
+            form.reset();
+          }, 2000);
         } else {
-          alert('❌ Error: ' + result.message);
+          messageBox.textContent = '❌ Error: ' + result.message;
+          messageBox.className = 'message error';
+          messageBox.classList.remove('hidden');
         }
       } catch (err) {
         console.error(err);
-        alert('⚠️ Network error. Please try again.');
+        messageBox.textContent = '⚠️ Network error. Please try again.';
+        messageBox.className = 'message error';
+        messageBox.classList.remove('hidden');
       }
     });
   </script>
