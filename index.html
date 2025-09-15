@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nexus Order Portal</title>
+  <title>Nexus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #0f0f0f; color: #e0e0e0; font-family: 'Orbitron', sans-serif; }
+    body { font-family: 'Orbitron', sans-serif; background-color: #0f0f0f; color: #e0e0e0; }
     .cyber-gradient-bg { background: linear-gradient(135deg, #0ff, #0f0); }
     .message { margin-top: 1rem; padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; }
     .success { background-color: #1f2937; color: #10b981; }
@@ -15,10 +16,22 @@
 </head>
 <body class="p-6">
 
-  <h1 class="text-3xl font-bold text-center mb-8">🛸 Nexus Order Portal</h1>
+  <nav class="flex justify-between items-center mb-8">
+    <h1 class="text-3xl font-bold">Nexus</h1>
+    <div class="space-x-4">
+      <button onclick="showPage('home')" class="hover:text-cyan-400">Home</button>
+      <button onclick="showPage('product')" class="hover:text-cyan-400">Product</button>
+      <button onclick="showPage('contact')" class="hover:text-cyan-400">Contact</button>
+    </div>
+  </nav>
 
-  <div id="product-page" class="max-w-md mx-auto cyber-gradient-bg p-6 rounded-xl border border-gray-700">
-    <h2 id="product-detail-name" class="text-xl font-semibold mb-2">Nexus CyberDrive</h2>
+  <div id="home-page">
+    <h2 class="text-xl mb-4">Welcome to Nexus</h2>
+    <p>Explore the future of cybernetic hardware.</p>
+  </div>
+
+  <div id="product-page" class="hidden">
+    <h2 id="product-detail-name" class="text-xl mb-2">Nexus CyberDrive</h2>
     <p id="product-detail-price" class="text-lg mb-4">₹4999</p>
 
     <form id="orderForm" class="space-y-4">
@@ -33,11 +46,22 @@
     <div id="messageBox" class="message hidden"></div>
   </div>
 
+  <div id="contact-page" class="hidden">
+    <h2 class="text-xl mb-4">Contact Us</h2>
+    <p>Email: support@nexuscyber.in</p>
+  </div>
+
   <script>
-    const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN'; // 🔒 Replace with your token
+    function showPage(page) {
+      document.getElementById('home-page').style.display = page === 'home' ? 'block' : 'none';
+      document.getElementById('product-page').style.display = page === 'product' ? 'block' : 'none';
+      document.getElementById('contact-page').style.display = page === 'contact' ? 'block' : 'none';
+    }
+
+    const GITHUB_TOKEN = 'YOUR_GITHUB_TOKEN';
     const REPO_OWNER = 'omguptaogwhitehathacker-svg';
-    const REPO_NAME = 'YOUR_REPO_NAME'; // 🔧 Replace with your repo name
-    const PAYMENT_URL = 'https://www.paypal.com/paypalme/YOURPAYMENTLINK'; // 💳 Replace with your payment link
+    const REPO_NAME = 'YOUR_REPO_NAME';
+    const PAYMENT_URL = 'https://www.paypal.com/paypalme/YOURPAYMENTLINK';
 
     document.getElementById('orderForm').addEventListener('submit', async function(e) {
       e.preventDefault();
